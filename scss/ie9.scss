@@ -1,0 +1,37 @@
+.footer {
+	/** footer menu **/
+	#block-pdempowers-footer {
+		display: block;
+		float: none;
+		clear: both;
+		ul.menu {
+			display: block;
+			position: relative;
+
+			>li {
+				// background: rgba(150,30,200,0.3);
+				// max-width: 260px;
+				width: 220px;
+				float: left;
+				ul.dropdown-menu {
+					display: inline-block !important;
+					li {
+						display: block;
+						// max-width: 260px;
+						width: 220px;
+						float: none;
+						a {
+							white-space: normal;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	#block-bottom {
+		display: block;
+		float: none;
+		clear: both;
+	}
+}

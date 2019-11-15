@@ -1,0 +1,84 @@
+#block-sectionscarouselhcp {
+	margin: 0 -15px;
+	background-image: url(../images/banner_home.jpg);
+
+	.node-site-hcp & {
+		background-image: url(../images/carousel-base_new.jpg);
+	}
+
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center center;
+	padding: 180px 30px !important;
+	position: relative;
+
+	.sections-selector {
+		max-width: 600px;
+		margin: auto;
+		background: white;
+		z-index: 2;
+
+		.slick-prev:before {
+			content: url(../images/arrow_left.svg);
+		}
+
+		.slick-next:before {
+			content: url(../images/arrow_right.svg);
+		}
+
+		.slick-dots li button:before {
+			content: "";
+			display: block;
+			width: 12px;
+			height: 12px;
+			border: 1px solid white;
+			border-radius: 50%;
+			position: relative;
+		}
+
+		.slick-dots li.slick-active button:before {
+			background: white;
+		}
+
+		.slick-next {
+			right: -28px;
+			@media (min-width: 420px) {
+				right: -40px;
+			}			
+		}
+
+		.slick-prev {
+			left: -28px;
+			@media (min-width: 420px) {
+				left: -40px;
+			}			
+		}
+	}
+
+	.item {
+		padding: 30px 30px 30px 30px;
+		position: relative;
+		box-sizing: border-box;
+		min-height: 400px;
+
+		.item-content {
+			display: flex;
+			justify-content: center;
+			flex-direction: column;
+			height: 330px;
+		}		
+
+		p {
+			margin: 1em 0;
+		}				
+
+		h2 {
+			margin: 0;
+			max-width: 490px;
+		}
+		a {
+			display: inline-block;
+		}
+	}
+
+}

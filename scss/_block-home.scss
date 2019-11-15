@@ -1,0 +1,215 @@
+.home-block {
+	padding: 60px 15px;
+
+	@media (min-width: $screen-sm-min) {
+		padding: 90px 30px;
+	}
+
+	margin: 0 -15px;
+	height: 100%;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+
+	@media (min-width: $screen-sm-min) {
+		margin: 0;
+
+		.node-id-31 & {
+			padding: 60px 30px;
+		}		
+	}
+
+	h2 {
+		margin-top: 0;
+	}
+	p {
+		font-size: 18px;
+	}
+	a {
+		font-size: 18px;
+	}
+
+	&__title {
+		margin-bottom: 1em;
+
+		@media (min-width: $screen-md-min) {
+			display: flex;
+			justify-content: space-between;		
+		}
+	}
+
+	&__content {
+		margin-bottom: 1em;
+	}
+
+	&__footer {
+		a.baxter-external-link {
+			border: 1px solid $color1;
+			display: inline-block;
+			width: 130px;
+			height: 49px;
+			position: relative;
+			vertical-align: middle;
+			&:after {
+				position: absolute;
+				right: 3px;
+				top: 0;
+				text-decoration: none;
+			}
+			margin-right: 15px;
+			margin-bottom: 15px;
+		}		
+
+		.btn-primary {
+			vertical-align: middle;
+			margin-right: 15px;
+			margin-bottom: 15px;
+		}
+
+		.embedded-entity {
+			display: block;
+			vertical-align: middle;
+			img {
+				width: 90px;
+				margin: 11px auto;
+				height: 25px;
+			}
+		}
+	}	
+
+	&--knowledge-center {
+		background: #004e95;
+		h2 {
+			color: white !important;
+
+			/* kids... don't try this at home*/
+			@media (min-width: $screen-sm-min){
+				min-height: 132px;
+			}
+			@media (min-width: $screen-md-min){
+				min-height: 88px;
+			}
+		}
+		p {
+			color: white;
+		}
+		a.btn.btn-primary {
+			background: white;
+			color: #004e95;
+			border: 2px solid white;
+			&:hover {
+				background: #004e95;
+				color: white;
+				border: 2px solid white;
+			}
+		}
+
+		@media (min-width: $screen-sm-min) {
+			.home-block__title {
+				justify-content: flex-end;
+				h2 {
+					text-align: right;
+				}
+			}
+			.home-block__content {
+				p {
+					text-align: right;
+				}
+			}
+			.home-block__footer {
+				text-align: right;
+			}			
+		}		
+	}
+
+	&--get-support {
+		background: white;		
+	}
+
+	&--pd-quiz {
+		background: #004e95;
+		h2 {
+			color: white !important;
+		}
+		p {
+			color: white;
+		}
+		a.btn.btn-primary {
+			background: white;
+			color: #004e95;
+			border: 2px solid white;
+			&:hover {
+				background: #004e95;
+				color: white;
+				border: 2px solid white;
+			}
+		}
+
+		.node-id-31 & {
+			background: #0D8ACB;
+			h2, p {
+				color: white;
+			}
+		}
+		img {
+			max-width: 106px !important;
+			margin-bottom: 0.5em;
+		}
+
+		@media (min-width: $screen-sm-min) {
+			.home-block__title {
+				flex-direction: row-reverse;
+			}			
+		}			
+	}
+
+	&--travel-club {
+		background: white;
+
+		.node-id-31 & {
+			background: #CDD5DF;
+		}
+
+		img {
+			max-width: 150px !important;
+			margin-bottom: 0.5em;
+		}
+
+		@media (min-width: $screen-sm-min) {
+
+			.home-block__title {
+				article {
+					overflow: hidden;
+					img {
+						float: right;
+					}
+				}
+				h2 {
+					text-align: right;
+				}
+			}
+			.home-block__content {
+				p {
+					text-align: right;
+				}
+			}
+			.home-block__footer {
+				text-align: right;
+			}			
+		}
+
+		@media (min-width: $screen-md-min) {
+
+
+			.home-block__title {
+				article {
+					overflow: visible;
+					img {
+						float: none;
+					}
+				}
+			}			
+		}	
+	}
+}

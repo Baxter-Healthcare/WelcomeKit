@@ -1,0 +1,286 @@
+#navbar {
+	// font-size: 14px;
+	font-size: 16px;
+	background: white;
+}
+
+.navbar-toggle {
+	padding: 13px 10px;
+	margin-top: 20px;
+}
+
+.navbar-nav > li > .dropdown-menu {
+	padding: 0;
+	border-radius: 0;
+}
+
+.navbar-nav > li:nth-child(1),
+.navbar-nav > li:nth-child(2),
+.navbar-nav > li:nth-child(3),
+.navbar-nav > li:nth-child(4),
+.navbar-nav > li:nth-child(5),
+.navbar-nav > li:nth-child(6),
+.navbar-nav > li:nth-child(7) {
+	display: block;
+	.node-site-hcp & {
+		display: none;
+	}
+}
+
+.navbar-nav > li:nth-child(8),
+.navbar-nav > li:nth-child(9),
+.navbar-nav > li:nth-child(10),
+.navbar-nav > li:nth-child(11) {
+	display: none;
+	.node-site-hcp & {
+		display: block;
+	}
+}
+
+body .navbar-nav > li:last-child {
+	display: block;
+}
+
+@media (min-width: 768px) {
+	.navbar-nav > li:nth-child(6),
+	.navbar-nav > li:nth-child(7) {
+		display: none;
+	}	
+}
+
+@media (min-width: 1000px) {
+	.navbar-nav {
+		margin-right: -15px;
+	}	
+
+	.nav > li > a {
+		padding: 10px 5px;
+	}	
+}
+
+@media (min-width: 1200px) {
+	.navbar-nav {
+		margin-right: 0;
+	}	
+
+	.nav > li > a {
+		padding: 10px 15px;
+	}	
+}
+
+@media (min-width: 1000px) {
+	.navbar-nav > li:nth-child(6),
+	.navbar-nav > li:nth-child(7) {
+		display: none;
+	}
+
+	#block-pdempowers-main-menu > ul.navbar-nav {
+		float: right;
+	}
+
+	#block-pdempowers-main-menu > ul.navbar-nav > li > a {
+		height: 85px;
+		display: block;
+		display: flex;
+		align-items: center;
+		background: white;
+	}
+	
+	.dropdown-menu {
+	    transition: all 0.8s cubic-bezier(0, 1, 0, 1);
+	}
+	
+	// disable hover effect on search item
+	.navbar-nav > li:nth-child(-n+11) {
+		> a::before {
+		    transition: all 0.5s;
+		    content: "";
+		    position: absolute;
+		    width: 100%;
+		    height: 8px;
+		    display: block;
+		    top: -1px;
+		    left: 0;
+		    opacity: 0;
+		}
+
+		> a:hover::before {
+			opacity: 1;
+		}
+
+		&.active > a::before {
+			opacity: 1;
+		}
+	}
+	// end of disable hover effect on search item
+
+	.navbar-nav > li .dropdown-menu li a {
+		padding-top: 8px;
+		padding-bottom: 8px;
+		font-size: 16px;
+	}
+	
+	// ckd
+	.navbar-nav > li:nth-child(1) {
+		max-width: 160px; 
+		 > a::before,
+		.dropdown-menu,
+		.dropdown-menu li a {
+			color: white;
+		    background: $colorCKD;
+		}
+		.dropdown-menu li a:hover,
+		.dropdown-menu li a.is-active {
+		    color: $colorCKD;
+		    background: white;
+		}
+	}
+
+	// pd 	
+	.navbar-nav > li:nth-child(2) {
+		> a::before,
+		.dropdown-menu,
+		.dropdown-menu li a {
+			color: white;
+		    background: $colorPD;
+		}
+		.dropdown-menu li a:hover,
+		.dropdown-menu li a.is-active {
+		    color: $colorPD;
+		    background: white;
+		}			
+	}
+	
+	// preparing
+	.navbar-nav > li:nth-child(3) {
+		max-width: 200px;
+		> a::before,
+		.dropdown-menu,
+		.dropdown-menu li a {
+		    color: white;
+		    background: $colorPRE;
+		}
+		.dropdown-menu li a:hover,
+		.dropdown-menu li a.is-active {
+		    color: $colorPRE;
+		    background: white;
+		}				
+	}	
+	
+	// living
+	.navbar-nav > li:nth-child(4) {
+		max-width: 160px;
+		> a::before,
+		.dropdown-menu,
+		dropdown-menu li a {
+			color: #004e95;
+		    background: $colorLIV;
+		}
+		.dropdown-menu li a:hover,
+		.dropdown-menu li a.is-active {
+		    color: $colorLIV;
+		    background: #004e95;
+		}		
+	}	
+
+	// hcp - why pd
+	.navbar-nav > li:nth-child(8) {
+		> a::before,
+		.dropdown-menu,
+		.dropdown-menu li a {
+			color: white;
+		    background: $colorPD;
+		} 
+		.dropdown-menu li a:hover,
+		.dropdown-menu li a.is-active {
+		    color: $colorPD;
+		    background: white;
+		}				
+	}
+
+	// hcp - hti
+	.navbar-nav > li:nth-child(9) {
+		.node-site-hcp & {
+			display: block;
+			display: flex;
+		}
+
+		> a::before,
+		.dropdown-menu,
+		.dropdown-menu li a {
+			color: white;
+		    background: $colorPD;
+		} 
+		.dropdown-menu li a:hover,
+		.dropdown-menu li a.is-active {
+		    color: $colorPD;
+		    background: white;
+		}			
+	}	
+
+	// hcp - resources
+	.navbar-nav > li:nth-child(10) {
+		.node-site-hcp & {
+			display: block;
+			display: flex;
+		}
+		> a::before,
+		.dropdown-menu,
+		.dropdown-menu li a {
+			color: white;
+		    background: $colorPD;
+		} 
+		.dropdown-menu li a:hover,
+		.dropdown-menu li a.is-active {
+		    color: $colorPD;
+		    background: white;
+		}				
+	}	
+
+	// hcp - join us
+	.navbar-nav > li:nth-child(11) {
+		.node-site-hcp & {
+			display: block;
+			display: flex;
+		}
+		> a::before,
+		.dropdown-menu,
+		.dropdown-menu li a {
+			color: white;
+		    background: $colorPD;
+		} 
+		.dropdown-menu li a:hover,
+		.dropdown-menu li a.is-active {
+		    color: $colorPD;
+		    background: white;
+		}			
+	}
+}
+
+.node-site-hcp .nav .dropdown .caret {
+	position: relative;
+	left: 10px;
+}
+
+a[title='Search'] {
+	display: block !important;
+	overflow: hidden;
+	position: relative;
+	width: 80px !important;
+	text-indent: -500px;
+
+	.open-menu & {
+		display: none !important;
+	}
+
+	&::before {
+		content: url(../images/search.svg);
+		display: inline-block;
+		width: 37px;
+		height: 33px;
+		position: absolute;
+		right: 21px;
+		top: 27px;
+		text-indent: 0;
+	}
+}

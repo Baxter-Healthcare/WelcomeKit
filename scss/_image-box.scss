@@ -1,0 +1,17 @@
+.travel-image-box {
+	text-align: center;
+	img {
+		margin: auto;
+	}
+	margin-bottom: 30px;
+	padding-top: 15px;
+	padding-bottom: 30px;
+
+	@media (min-width: $screen-sm-min) {
+		&:nth-child(2) {
+			border-left: 1px dashed gray;
+			border-right: 1px dashed gray;
+			margin-bottom: 60px;
+		}
+	}
+}

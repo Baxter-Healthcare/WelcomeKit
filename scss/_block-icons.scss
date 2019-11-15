@@ -1,0 +1,26 @@
+#block-icons {
+	margin: 0 -15px;
+    padding: 40px;
+	background: #004e95;
+	
+	a {
+		font-family: "DINPro", sans-serif;
+        font-size: 20px;
+        color: white;
+        position: flex;
+    }
+	
+	.img-responsive {
+        max-width: 100px !important;
+        float: left;
+        position: flex;
+        top: 5px;
+        left: 5px;
+    }
+    
+	// @media (min-width: $screen-sm-min) {
+	// 	.img-responsive {
+	// 		margin: auto;
+	// 	}
+	// }		
+}

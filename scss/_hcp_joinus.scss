@@ -1,0 +1,78 @@
+#join-us-form {
+	margin-right: -15px;
+	margin-left: -15px;
+	background-color: #dbe6f0;
+	text-align: right;
+	padding-bottom: 0;
+
+	@media only screen and (min-width: 992px) {
+		.container {
+			background-image: url(../images/join-us.jpg);
+			background-size: contain;
+			background-repeat: no-repeat;
+			background-position: left center;
+
+			.node-site-patient & {
+				background-image: url(../images/join-us-patient.png);
+			}		
+		}
+	}
+
+	.form {
+		display: inline-block;
+		text-align: left;
+		max-width: 600px;
+		padding-top: 60px;
+		padding-bottom: 40px;
+		background-color: #dbe6f0;
+		padding-left: 30px;
+		padding-right: 30px;		
+
+		position: relative;
+        
+        @media only screen and (min-width: 992px) and (max-width: 1199px) {
+        	left: 15px;
+        }
+
+		input[type=text],
+		input[type=email],
+		select,
+		select option {
+			background-color: rgb(235, 241, 247);
+			border: none;
+			border-radius: 0;
+			height: 40px;
+			line-height: 24px;
+		}
+
+		button[type=submit] {
+			background-color: #444;
+			border: none;
+			height: 40px;
+			line-height: 24px;
+			padding-left: 60px;
+			padding-right: 60px;
+			text-transform: uppercase;
+		}		
+	}
+
+	h3 {
+		color: #004FA0;
+	}
+
+	h3 + p {
+		max-width: 300px; 
+	}
+
+	.form-header,
+	.form-section {
+		margin-bottom: 30px;
+	}
+
+	.form-group {
+		margin-bottom: 10px;
+	}
+
+}
+
+

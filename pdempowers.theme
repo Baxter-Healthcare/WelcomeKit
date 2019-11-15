@@ -1,0 +1,63 @@
+<?php
+/**
+ * @file
+ * Bootstrap sub-theme.
+ *
+ * Place your custom PHP code in this file.
+ */
+use Drupal\Component\Utility\Html;
+
+/**
+ * Preprocess variables for html templates.
+ * @param $variables
+ */
+function pdempowers_preprocess_html(&$variables) {
+
+	try {
+		$node = \Drupal::routeMatch()->getParameter('node');
+
+		if ($node instanceof \Drupal\node\NodeInterface) {
+		  $nid = $node->id();
+
+		  $variables['attributes']['class'][] = 'node-id-' . $nid;
+		  $variables['attributes']['class'][] = 'node-section-' . $node->get('field_section')->value;
+		  $variables['attributes']['class'][] = 'node-site-' . $node->get('field_site')->value;
+		}
+
+	} catch ( Exception $e) {
+		// nothig to do
+	}
+
+
+
+  if ($node = \Drupal::routeMatch()->getParameter('node')) {
+    $content_type = $node->bundle();
+
+    if ($content_type === "app_page"){
+    	$class = $node->get('field_class')->getValue();
+    	$handler = $node->get('field_handler')->getValue();
+    	$variables['app_class'] = $class[0]['value'];
+    	$variables['app_data_handler'] = $handler[0]['value'];
+    }
+
+    if ($content_type === "landing_page_hcp"){
+    	$variables['attributes']['class'][] = "node-site-hcp";
+    }
+
+  }	
+  
+}
+
+function pdempowers_theme_suggestions_page_alter(array &$suggestions, array $variables) {
+  if ($node = \Drupal::routeMatch()->getParameter('node')) {
+    $content_type = $node->bundle();
+    $suggestions[] = 'page__'.$content_type;
+  }
+}
+
+// function pdempowers_preprocess_node(&$variables) {
+// 	echo '<pre>';
+// 	var_dump($variables['front_page']);	
+// 	echo '</pre>';
+// }
+

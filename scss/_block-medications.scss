@@ -1,0 +1,34 @@
+#block-medications {
+	margin: 0 -15px;
+    padding: 0;
+	// background: #a1bfdb;
+	background: #e2e6f2;
+	opacity: 0.95;
+  	filter: alpha(opacity=95);
+
+	
+	p a {
+		font-family: "DINPro", sans-serif;
+		padding: 60px 0;
+		font-size: 20px;
+	}
+	
+	.img-responsive {
+		max-width: 200px !important;
+	}
+
+	hr {
+		border: none;
+		height: 1.5px;
+		/* Set the hr color */
+		color: rgb(255, 255, 255); /* old IE */
+		background-color: rgb(252, 252, 252); /* Modern Browsers */
+	}
+
+	@media (min-width: $screen-sm-min) {
+		.img-responsive {
+			margin: auto;
+		}
+	}		
+}
+

@@ -1,0 +1,226 @@
+.node-site-hcp .region-content .blockquote {
+    background: #004e95;
+	background: linear-gradient(to right, rgba(6,93,165,1) 0%,rgba(13,138,203,1) 100%);
+	color: white;
+	h2 {
+		color: white;
+		margin-bottom: 30px;
+	}
+
+	.container {
+		padding: 0 15px;
+	}
+
+	.picture {
+		height: 75px;
+		margin-bottom: 15px;
+	}
+}
+
+.node-site-hcp .region-content .worldwide-table th,
+.node-site-hcp .region-content .worldwide-table td {
+    border:none;
+}
+.node-site-hcp .region-content .worldwide-table tr:nth-child(1) {
+    background: #004e95;
+    background: linear-gradient(to right, rgba(6,93,165,1) 0%,rgba(13,138,203,1) 100%);
+    color: white;
+}
+
+.node-site-hcp .region-content .worldwide-table th {
+    padding: 15px;
+    text-align: center;
+}
+
+.node-site-hcp .region-content .worldwide-table td {
+    border-bottom: 1px dashed gray;
+    width: 16.66%;
+    padding: 15px;
+    text-align: center;
+}
+
+.node-site-hcp .region-content .worldwide-table td:nth-child(1) {
+    background-color: rgba(0,0,0,0.05);
+    text-align: left;
+}
+
+.node-site-hcp .region-content .patient-table th, 
+.node-site-hcp .region-content .patient-table td {
+    border: none;
+    // font-size: 13px;
+    font-size: 15px;
+}
+
+.node-site-hcp .region-content .patient-table th {
+    text-align: center;
+}
+
+.node-site-hcp .region-content .patient-table td:nth-child(1) {
+    padding: 8px 30px 0 0;
+}
+
+.node-site-hcp .region-content .patient-table tr.more-details td {
+    text-align: center;
+    padding: 15px 8px;
+    background: rgba(0,0,0,0.05);
+    // font-size: 15px;
+    font-size: 16px;
+    border-radius: 10px;
+}
+
+.node-site-hcp .region-content .patient-table th p, 
+.node-site-hcp .region-content .patient-table td:nth-child(1) p {
+    // font-size: 17px;
+    font-size: 18px;
+    background: linear-gradient(135deg, rgba(56,170,225,1) 0%,rgba(6,94,167,1) 100%);
+    color: white;
+    padding: 10px 5px;
+    border-radius: 10px;
+}
+
+.node-site-hcp .region-content .patient-table td:nth-child(1) {
+    width:15%;
+}
+
+.node-site-hcp .region-content .patient-table td:nth-child(2), 
+.node-site-hcp .region-content .patient-table td:nth-child(3) {
+    width:25%;
+}
+
+.node-site-hcp .region-content .patient-table td:nth-child(4) {
+    width:35%;
+}
+
+.node-site-hcp .region-content .patient-table td:nth-child(5) {
+    width:25%;
+}
+
+.node-site-hcp .region-content .patient-table td:nth-child(2) p, 
+.node-site-hcp .region-content .patient-table td:nth-child(3) p, 
+.node-site-hcp .region-content .patient-table td:nth-child(4) p {
+    border: 1px solid #009EE2;
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+}
+
+.node-site-hcp .region-content .patient-table tr.image td {
+    vertical-align: bottom;
+}
+
+.node-site-hcp .region-content section.healthcare-table {
+    // background: #004e95;
+    // background: linear-gradient(to right, rgba(6,93,165,1) 0%,rgba(13,138,203,1) 100%);
+    padding: 50px 0;
+}
+
+.node-site-hcp .region-content section.healthcare-table table {
+    border: none;
+}
+
+.node-site-hcp .region-content section.healthcare-table th {
+    border: none;
+    background-color: rgba(37, 34, 51, .15);
+    font-weight: normal;
+    vertical-align: middle;
+}
+
+.node-site-hcp .region-content section.healthcare-table td {
+    border: none;
+    border-bottom: 1px dashed #231F20;
+    vertical-align: middle;
+    padding: 15px 10px;
+}
+
+.node-site-hcp .region-content section.healthcare-table td:nth-child(1) {
+    width: 28%;
+}
+
+.node-site-hcp .region-content section.healthcare-table td:nth-child(n+2) {
+    width: 18%;
+}
+
+.node-site-hcp .region-content .image-box {
+    text-align: center;
+    padding: 25px 15px;
+    // font-size: 14px;
+    font-size: 16px;
+}
+
+.node-site-hcp .region-content .image-box .embedded-entity {
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+@media (min-width: 768px) {
+    .node-site-hcp .region-content .patient-image-box .row.first {
+        border-bottom: 1px dashed #414042;
+    }
+
+    .node-site-hcp .region-content .patient-image-box .image-box:last-child {
+        border-left: 1px dashed #414042;
+    }
+
+    .node-site-hcp .region-content .support-image-box .row.first, 
+    .node-site-hcp .region-content .support-image-box .row.second {
+        border-bottom: 1px dashed #414042;
+    }
+
+    .node-site-hcp .region-content .support-image-box .image-box:first-child {
+        border-right: 1px dashed #414042;
+    }
+}
+
+.node-site-hcp .region-content .support-image-box .third .image-box:first-child {
+    border-right: none;
+    float: none;
+    margin: auto;
+}
+
+.node-site-hcp .region-content .table.patient-care td {
+    border: none;
+    width: 25%;
+}
+
+.node-site-hcp .region-content .table.patient-care tr.table-head {
+    background: #004e95;
+    background: linear-gradient(to right, rgba(6,93,165,1) 0%,rgba(13,138,203,1) 100%);
+    color: white;
+}
+
+.node-site-hcp .region-content .table.patient-care tr:not(.table-head) td:nth-child(odd) {
+    background-color: rgba(0,0,0,0.05);
+}
+
+.node-site-hcp .region-content .img-prescribers {
+    padding: 0 0 50px;
+}
+
+.node-site-hcp .region-content .img-responsive.pd-mortality {
+    margin: 30px 0;
+}
+
+.app-store {
+	max-width: 230px;
+	margin: auto;
+	cursor: pointer;
+}
+
+.google-play {
+	max-width: 290px;
+	margin: auto;
+	cursor: pointer;
+}
+
+.baxter-thumbnail {
+    padding: 16px 0;
+}
+
+.title-link {
+    color: #337ab7;
+}
+
+.title-link:hover {
+    color: #23527c;
+}
+

@@ -1,0 +1,25 @@
+{
+    "name": "",
+    "displayName": "pd-empowers-theme",
+    "version": "1.0.0",
+    "description": "PD Empowers Drupal Theme 8.3",
+    "dependencies": {},
+    "devDependencies": {
+        "autoprefixer": "~6.3",
+        "cssnano": "^3.10.0",
+        "grunt": "^1.0.3",
+        "grunt-contrib-sass": "~1.0",
+        "grunt-contrib-watch": "^1.1.0",
+        "grunt-postcss": "~0.8",
+        "postcss-flexibility": "^2.0.0"
+    },
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git@git.lemieuxbedard.ca:baxter-usa/pd-empowers-theme.git"
+    },
+    "author": "Yannick Gagnon (yannick.gagnon@lemieuxbedard.com)",
+    "license": "BSD"
+}

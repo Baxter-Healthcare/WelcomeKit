@@ -1,0 +1,21 @@
+#block-joinus {
+	background: white;
+	padding: 45px 0;
+	margin: 0 -15px;
+	text-align: left; 
+
+	@media (min-width: $screen-sm-min) {
+		text-align: right; 
+		h2 {
+			margin-top: 0;
+		}
+		.img-responsive {
+			margin: auto;
+		}
+		.col {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+		}
+	}
+}

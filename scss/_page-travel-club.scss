@@ -1,0 +1,81 @@
+// slider
+.considerations {
+	margin: auto;
+	max-width: 498px;
+
+	@media (min-width: $screen-sm-min) {
+		max-width: 996px;
+	}
+	.item-content {
+		position: relative;
+		.legend {
+			background-color: rgba(0,78,149,0.8);
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			padding: 15px;
+			p {
+				color: white;
+				font-size: 16px;
+				&.footnote {
+					font-size: smaller;
+				}
+			}
+		}
+
+		@media (min-width: $screen-sm-min) {
+			display: flex;
+			flex-direction: row-reverse;
+
+			article {
+				flex: 1 1 0;
+				position: relative;
+			}
+			
+			.legend {
+				flex: 1 1 0;
+				display: flex;
+				position: relative;
+				flex-direction: column;
+				justify-content: center;
+				background-color: rgba(0,78,149,1);
+				p {
+					font-size: 24px;
+					font-family: 'Scope One', serif;
+					padding: 15px 30px;
+					&.footnote {
+						position: absolute;
+						font-size: 14px;
+						bottom: 15px;
+					}
+				}
+				
+			}
+		}
+	}
+
+	.slick-dots li button:before {
+		background: rgb(0,78,149);
+		color: rgb(0,78,149);
+		border-radius: 50%;
+		content: "";
+	}
+}
+
+.node-id-473 {
+	@media (min-width: $screen-sm-min) {
+		.page-header-title:before {
+			content: "";
+			display: block;
+			background-size: contain;
+			background-repeat: no-repeat;
+			background-image: url(../images/travel-club-logo.png);
+			height: 10vw;
+			width: 14vw;
+			position: relative;
+			top: -14vw;
+			margin-bottom: -10vw;
+			left: calc(50% - 8vw)
+		}		
+	}
+}

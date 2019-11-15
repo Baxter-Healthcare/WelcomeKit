@@ -1,0 +1,7 @@
+#block-library {
+	margin: 0 -15px;
+	padding: 0;
+	@media (min-width: $screen-sm-min) {
+		background: linear-gradient(90deg, #004e95 50%, white 50%);
+	}		
+}

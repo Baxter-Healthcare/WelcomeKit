@@ -1,0 +1,160 @@
+{#
+/**
+ * @file
+ * Default theme implementation to display the basic html structure of a single
+ * Drupal page.
+ *
+ * Variables:
+ * - $css: An array of CSS files for the current page.
+ * - $language: (object) The language the site is being displayed in.
+ *   $language->language contains its textual representation.
+ *   $language->dir contains the language direction. It will either be 'ltr' or
+ *   'rtl'.
+ * - $rdf_namespaces: All the RDF namespace prefixes used in the HTML document.
+ * - $grddl_profile: A GRDDL profile allowing agents to extract the RDF data.
+ * - $head_title: A modified version of the page title, for use in the TITLE
+ *   tag.
+ * - $head_title_array: (array) An associative array containing the string parts
+ *   that were used to generate the $head_title variable, already prepared to be
+ *   output as TITLE tag. The key/value pairs may contain one or more of the
+ *   following, depending on conditions:
+ *   - title: The title of the current page, if any.
+ *   - name: The name of the site.
+ *   - slogan: The slogan of the site, if any, and if there is no title.
+ * - $head: Markup for the HEAD section (including meta tags, keyword tags, and
+ *   so on).
+ * - $styles: Style tags necessary to import all CSS files for the page.
+ * - $scripts: Script tags necessary to load the JavaScript files and settings
+ *   for the page.
+ * - $page_top: Initial markup from any modules that have altered the
+ *   page. This variable should always be output first, before all other dynamic
+ *   content.
+ * - $page: The rendered page content.
+ * - $page_bottom: Final closing markup from any modules that have altered the
+ *   page. This variable should always be output last, after all other dynamic
+ *   content.
+ * - $classes String of classes that can be used to style contextually through
+ *   CSS.
+ *
+ * @ingroup templates
+ *
+ * @see bootstrap_preprocess_html()
+ * @see template_preprocess()
+ * @see template_preprocess_html()
+ * @see template_process()
+ */
+#}
+{%
+  set body_classes = [
+    logged_in ? 'user-logged-in',
+    not root_path ? 'path-frontpage' : 'path-' ~ root_path|clean_class,
+    node_type ? 'page-node-type-' ~ node_type|clean_class,
+    db_offline ? 'db-offline',
+    theme.settings.navbar_position ? 'navbar-is-' ~ theme.settings.navbar_position,
+    theme.has_glyphicons ? 'has-glyphicons'
+  ]
+%}
+<!DOCTYPE html> 
+
+{% if node_type == "app_page" %}
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <base href="{{ directory }}/">
+
+    <meta name="description" content="{% block description %}{% endblock %}" />
+    <meta name="keywords" content="{% block keywords %}{% endblock %}">
+
+    <meta http-equiv="cleartype" content="on" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico?v=2" />
+    <link rel="icon" type="image/png" href="images/favicon.png?v=2" />
+
+    <link rel="stylesheet" href="css/site.css?ver=20181109" media="all" />
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-98212439-13"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-98212439-13');
+    </script>    
+    
+    <script language='JavaScript1.1' async src='//pixel.mathtag.com/event/js?mt_id=1387017&mt_adid=219876&mt_exem=&mt_excl=&v1=&v2=&v3=&s1=&s2=&s3='></script>
+
+    {# click on start button option 1#}
+    {# <script language='JavaScript1.1' async src='//pixel.mathtag.com/event/js?mt_id=1387356&mt_adid=219876&mt_exem=&mt_excl=&v1=&v2=&v3=&s1=&s2=&s3='></script> #}
+    {# end of click on start button option 1#}
+
+    <script type="text/javascript" src="//use.typekit.net/dao2moz.js"></script>
+    <script>try{Typekit.load();}catch(e){}</script>
+  </head>
+  <body class="lang-en {{ app_class }}" data-handler="{{ app_data_handler }}">
+
+    {{ page }}
+
+    {# click on start button option 2#}
+    {# <script>
+      var startButton = document.getElementsByClassName("button blue start");
+      if (startButton.length) {
+        startButton[0].addEventListener(
+          'click',
+          function(event){
+            var target = this.href;
+            event.preventDefault();
+            var pixel = document.createElement('script');
+            pixel.setAttribute('src', '//pixel.mathtag.com/event/js?mt_id=1387356&mt_adid=219876&mt_exem=&mt_excl=&v1=&v2=&v3=&s1=&s2=&s3=');
+            document.body.appendChild(pixel);
+            setTimeout(function(){
+              window.location.assign(target); 
+            }, 100);
+          },
+          false
+        );
+      }
+    </script>#}
+    {# end of click on start button option 2#}
+   
+    <script src="js/site.js?ver=20181109"></script>
+  </body>
+</html>
+
+{% elseif node_type == "external_page" %}
+
+    {{ include (directory  ~ '/templates/ext/home.html.twig') }}
+
+{% elseif node_type == "external_page_thanks" %}
+
+    {{ include (directory  ~ '/templates/ext/thanks.html.twig') }}    
+
+{% else %}
+
+<html {{ html_attributes }}>  
+  <head>
+    <head-placeholder token="{{ placeholder_token|raw }}">
+    <title>{{ head_title|safe_join(' | ') }}</title>
+    <css-placeholder token="{{ placeholder_token|raw }}">
+    <!--[if IE 9]>
+      <link rel="stylesheet" href="/themes/custom/pdempowers/css/ie9.css" media="all" />
+    <![endif]-->        
+    <js-placeholder token="{{ placeholder_token|raw }}">
+   
+    <script language='JavaScript1.1' async src='//pixel.mathtag.com/event/js?mt_id=1387356&mt_adid=219876&mt_exem=&mt_excl=&v1=&v2=&v3=&s1=&s2=&s3='></script>
+  </head>
+  <body{{ attributes.addClass(body_classes) }}>
+
+    <a href="#main-content" class="visually-hidden focusable skip-link">
+      {{ 'Skip to main content'|t }}
+    </a>
+    {{ page_top }}
+    {{ page }}
+    {{ page_bottom }}
+    <js-bottom-placeholder token="{{ placeholder_token|raw }}">
+  </body>
+</html>
+
+{% endif %}    
+

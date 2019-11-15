@@ -1,0 +1,86 @@
+.region-content {
+	section {
+		padding: 30px 0;
+		h1, h2 {
+			color: $color1;
+		}
+	}
+
+	// section two colors
+	.article-header {
+		.col {
+			* {
+				color: white;
+			}
+			&:nth-child(1) {
+				background: $color1;
+			}
+			&:nth-child(2) {
+				.node-section-ckd & { background-color: $colorCKD; }
+				.node-section-pd & { background-color: $colorPD; }
+				.node-section-preparing & { background-color: $colorPRE;}
+				.node-section-living & {
+					* {
+						color: black !important;
+					}
+					background-color: $colorLIV; 
+				}		
+			}
+		}
+
+	}
+
+	// section blockquote
+	.blockquote {
+		background: rgba(0,78,149,0.2);
+		margin-left: -15px;
+		margin-right: -15px;
+		.container {
+			padding: 0 60px;
+		}
+	}
+
+	.blockquote-hcp {
+	    background: #004e95;
+		background: linear-gradient(to right, rgba(6,93,165,1) 0%,rgba(13,138,203,1) 100%);
+		color: white;
+		margin-left: -15px;
+		margin-right: -15px;
+		h2 {
+			color: white;
+			margin-bottom: 30px;
+		}
+
+		.container {
+			padding: 0 30px;
+		}
+	}
+
+}
+
+// vertically centered sections (using flexbox)
+.box-vertical-center {
+	@media (min-width: 767px) {
+		display: flex;
+	}
+	
+	.col {
+		display: flex;
+		align-items: center;
+
+		// important: use col-content to wrap elements in columns
+		.col-content {
+			padding: 60px 30px;	
+		}
+	}
+}
+
+.box-vertical-top {
+	padding-top: 30px;
+}
+
+// automatically created columns
+// ref: https://www.w3schools.com/css/css3_multiple_columns.asp
+.columns-2 {
+	columns: 300px 2;
+}

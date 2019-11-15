@@ -1,0 +1,171 @@
+#block-sectionscarousel {
+	margin: 0 -15px;
+	background-image: url(../images/banner_home.jpg);
+
+	.node-site-hcp & {
+		background-image: url(../images/carousel-base_new.jpg);
+	}
+
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center center;
+	padding: 180px 30px !important;
+	position: relative;
+
+	// &:before {
+	// 	content: "";
+	// 	display: block;
+	// 	position: absolute;
+	// 	width: 100%;
+	// 	height: 100%;
+	// 	background-color: rgba(0,0,0,0.3);
+	// 	top: 0;
+	// 	right: 0;
+	// 	z-index: 0;
+	// }	
+
+	.sections-selector {
+		max-width: 600px;
+		margin: auto;
+		background: white;
+		z-index: 2;
+
+		.slick-prev:before {
+			content: url(../images/arrow_left.svg);
+		}
+
+		.slick-next:before {
+			content: url(../images/arrow_right.svg);
+		}
+
+		.slick-dots li button:before {
+			content: "";
+			display: block;
+			width: 12px;
+			height: 12px;
+			border: 1px solid white;
+			border-radius: 50%;
+			position: relative;
+		}
+
+		.slick-dots li.slick-active button:before {
+			background: white;
+		}
+
+		.slick-next {
+			right: -28px;
+			@media (min-width: 420px) {
+				right: -40px;
+			}			
+		}
+
+		.slick-prev {
+			left: -28px;
+			@media (min-width: 420px) {
+				left: -40px;
+			}			
+		}
+	}
+
+	.item {
+		padding: 30px 30px 30px 30px;
+		position: relative;
+		box-sizing: border-box;
+		min-height: 390px;
+
+		.item-content {
+			display: flex;
+			justify-content: center;
+			flex-direction: column;
+			height: 330px;
+		}
+
+		h2 {
+			margin-top: 0;
+			margin-bottom: 0;
+		}		
+
+		p {
+			margin: 1em 0;
+			font-size: 18px;
+		}
+
+		a {
+			border-radius: 0;
+			color: white;
+			padding: 10px 30px;
+			text-transform: uppercase;
+			text-decoration: none;
+			display: inline-block;
+		}
+
+		&[data-section="1"] {
+			// &:after {
+			// 	background-image: url(../images/banner_01-img01.jpg);
+			// }
+
+			a {
+				background: $colorCKD;
+			}
+		}
+			
+
+		&[data-section="2"] {
+			// &:after {
+			// 	background-image: url(../images/banner_02-img01.jpg);
+			// }
+
+			a {
+				background: $colorPD;
+			}
+		}
+
+		&[data-section="3"] {
+			// &:after {
+			// 	background-image: url(../images/banner_03-img01.jpg);
+			// }
+
+			a {
+				background: $colorPRE;
+			}
+		}
+
+		&[data-section="4"] {
+			// &:after {
+			// 	background-image: url(../images/banner_04-img01.jpg);
+			// }
+			a {
+				background: $colorLIV;
+				color: black;
+			}
+		}
+
+		&[data-section="5"] {
+			a {
+				background: $colorPD;
+			}
+		}	
+
+		&[data-section="6"] {
+			a {
+				background: $colorPD;
+			}
+		}
+
+		&[data-section="7"] {
+			a {
+				background: $colorPD;
+			}
+		}					
+
+		h2 {
+			max-width: 400px;
+		}		
+	}
+
+}
+
+#block-sectionscarousel {
+	// mask
+
+}

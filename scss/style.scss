@@ -1,0 +1,44 @@
+// Default variables.
+@import "default-variables";
+
+@import '../bootstrap/assets/stylesheets/bootstrap';
+@import url("https://use.typekit.net/ywb0yxi.css");
+@import url('https://fonts.googleapis.com/css?family=Fjalla+One|Roboto:400,400i,700|Scope+One');
+
+// Base-theme overrides.
+@import 'overrides';
+@import 'theme';
+@import 'theme-hcp';
+@import 'header';
+@import 'footer';
+@import 'region-main-image';
+@import 'region-content';
+
+@import 'navbar';
+
+// @import 'block-main-home-image';
+@import 'block-home';
+
+@import 'block-welcome';
+@import 'block-welcome-hcp';
+@import 'block-medications';
+@import 'block-carousel';
+@import 'block-carousel-hcp';
+@import 'block-additions';
+@import 'block-library';
+@import 'block-icons';
+@import 'block-travel-club';
+@import 'block-assessment';
+@import 'block-joinus';
+@import 'block-why-pd';
+@import 'page-travel-club';
+
+@import 'asset-link';
+
+@import 'search-results'; 
+
+@import 'hcp_joinus';
+@import 'link-box';
+@import 'image-box';
+@import 'navigation';
+@import 'btn-download';

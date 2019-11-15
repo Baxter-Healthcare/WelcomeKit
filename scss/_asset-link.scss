@@ -1,0 +1,60 @@
+.asset-link {
+	// cursor: pointer;
+
+	.data-layer {
+		display: none;
+	}
+
+	.action-layer {
+		border: 1px solid gray;
+		height: 300px;
+		position: relative;
+		padding: 20px;
+		margin-bottom: 26px;
+		p {
+			position: absolute;
+			bottom: 15px;
+			padding-right: 15px;
+			font-size: 15px;
+			&:before {
+				position: absolute;
+				top: -56px;
+				display: inline-block;
+				padding: 2px 10px;
+				color: white;
+				background: #004e95;				
+			}
+		}
+
+		span {
+			position: relative;
+			top: 45px;
+			display: inline-block;
+			padding: 2px 10px;
+			margin-right: 8px;
+			color: white;
+			background: #004e95;
+			cursor: pointer;
+		}
+
+		.asset-image {
+			height: 70%;
+			margin: -20px;
+			background-position: center center;
+			background-size: cover;
+		}
+	}
+
+	// &.pdf .action-layer p:before {
+	// 	content: "PDF";
+	// }
+
+	&.video .action-layer p:before {
+		content: "VIDEO";
+		cursor: pointer;
+	}
+}
+
+.video-modal .modal-content {
+	border-radius: 0;
+}

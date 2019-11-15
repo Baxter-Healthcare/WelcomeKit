@@ -1,0 +1,61 @@
+.region-main-image {
+	#block-mainimage {
+		margin-bottom: -40px;
+
+		// fixed navbar needs this
+		// margin-top: 100px;
+		margin-top: 60px;
+
+		img {
+			width: 100%;
+		}
+	}
+
+	.page-header-title {
+		font-size: 24px !important;
+		padding: 0 30px;
+		line-height: 40px;
+		min-height: 40px;
+		text-transform: none;
+		display: inline-block;
+		color: white;
+		background-color: $color1;
+		margin-top: 0;
+		margin-bottom: 0;
+		span {
+			font-family: 'Scope One', serif;
+		}
+	}
+
+	// transition: all 0.3s;	
+
+	// @media (min-width: 1000px){
+	// 	&.fixed {
+	// 		position: fixed;
+	// 		// top: -119px;
+	// 		width: 100%;
+	// 		top: -238px;
+	// 		z-index: 10;
+	// 	}
+	// }
+}
+
+// .compensated {
+// 	@media (min-width: 1000px){
+// 		padding-top: 368px;
+// 	}
+// }
+
+@media (min-width: 1000px){
+	.title-wrapper {
+		transition: 0.5s;
+		z-index: 10;
+		&.fixed {
+			position: fixed;
+			top: 120px;
+			width: 100%;
+			left: 0;
+			background: $color1;		
+		}
+	}
+}
