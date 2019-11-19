@@ -7,20 +7,21 @@
 		font-family: "DINPro", sans-serif;
         font-size: 20px;
         color: white;
-        position: flex;
+        display: block;
+        // float: right;
     }
 	
 	.img-responsive {
         max-width: 100px !important;
-        float: left;
-        position: flex;
+        // position: flex;
         top: 5px;
         left: 5px;
     }
     
-	// @media (min-width: $screen-sm-min) {
-	// 	.img-responsive {
-	// 		margin: auto;
-	// 	}
-	// }		
+	@media (min-width: $screen-sm-min) {
+		.img-responsive {
+            margin: auto;
+            float: left;
+		}
+	}		
 }

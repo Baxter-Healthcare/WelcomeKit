@@ -9591,17 +9591,38 @@ a[title=Search]::before {
   opacity: 0.95;
   filter: alpha(opacity=95);
 }
-#block-medications p a {
+#block-medications a {
+  font-family: "DINPro", sans-serif;
+  padding: 60px 0;
+  font-size: 16px !important;
+  font-weight: bold;
+  color: #004e95;
+  text-align: center;
+}
+@media (min-width: 420px) {
+  #block-medications a {
+    font-size: 20px;
+  }
+}
+#block-medications p {
   font-family: "DINPro", sans-serif;
   padding: 60px 0;
   font-size: 20px;
+  color: #5a5a5a;
+  text-align: left;
+}
+@media (min-width: 420px) {
+  #block-medications p {
+    font-size: 20px;
+  }
 }
 #block-medications .img-responsive {
   max-width: 200px !important;
 }
 #block-medications hr {
-  border: none;
-  height: 1.5px;
+  display: block;
+  border-width: 1px;
+  border-style: inset;
   /* Set the hr color */
   color: white;
   /* old IE */
@@ -9826,14 +9847,18 @@ a[title=Search]::before {
   font-family: "DINPro", sans-serif;
   font-size: 20px;
   color: white;
-  position: flex;
+  display: block;
 }
 #block-icons .img-responsive {
   max-width: 100px !important;
-  float: left;
-  position: flex;
   top: 5px;
   left: 5px;
+}
+@media (min-width: 768px) {
+  #block-icons .img-responsive {
+    margin: auto;
+    float: left;
+  }
 }
 
 #block-travelclub {

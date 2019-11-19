@@ -4,22 +4,42 @@
 	// background: #a1bfdb;
 	background: #e2e6f2;
 	opacity: 0.95;
-  	filter: alpha(opacity=95);
+	  filter: alpha(opacity=95);
+	  
+	  	a {
+			font-family: "DINPro", sans-serif;
+			padding: 60px 0;
+			font-size: 16px !important;
+			font-weight: bold;
+			color: #004e95;
+			text-align: center;
 
-	
-	p a {
-		font-family: "DINPro", sans-serif;
-		padding: 60px 0;
-		font-size: 20px;
-	}
+			@media (min-width: 420px) {
+				font-size: 20px;
+			}
+
+		  }
+
+		p {
+			font-family: "DINPro", sans-serif;
+			padding: 60px 0;
+			font-size: 20px;
+			color: rgb(90, 90, 90);
+			text-align: left;
+
+			@media (min-width: 420px) {
+				font-size: 20px;
+			}
+		}
 	
 	.img-responsive {
 		max-width: 200px !important;
 	}
 
 	hr {
-		border: none;
-		height: 1.5px;
+		display: block;
+		border-width: 1px;
+		border-style: inset;
 		/* Set the hr color */
 		color: rgb(255, 255, 255); /* old IE */
 		background-color: rgb(252, 252, 252); /* Modern Browsers */
