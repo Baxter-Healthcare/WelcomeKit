@@ -1,34 +1,26 @@
 .footer {
-  /** footer menu **/
-}
-.footer #block-pdempowers-footer {
-  display: block;
-  float: none;
-  clear: both;
-}
-.footer #block-pdempowers-footer ul.menu {
-  display: block;
-  position: relative;
-}
-.footer #block-pdempowers-footer ul.menu > li {
-  width: 220px;
-  float: left;
-}
-.footer #block-pdempowers-footer ul.menu > li ul.dropdown-menu {
-  display: inline-block !important;
-}
-.footer #block-pdempowers-footer ul.menu > li ul.dropdown-menu li {
-  display: block;
-  width: 220px;
-  float: none;
-}
-.footer #block-pdempowers-footer ul.menu > li ul.dropdown-menu li a {
-  white-space: normal;
-}
-.footer #block-bottom {
-  display: block;
-  float: none;
-  clear: both;
-}
+  /** footer menu **/ }
+  .footer #block-pdempowers-footer {
+    display: block;
+    float: none;
+    clear: both; }
+    .footer #block-pdempowers-footer ul.menu {
+      display: block;
+      position: relative; }
+      .footer #block-pdempowers-footer ul.menu > li {
+        width: 220px;
+        float: left; }
+        .footer #block-pdempowers-footer ul.menu > li ul.dropdown-menu {
+          display: inline-block !important; }
+          .footer #block-pdempowers-footer ul.menu > li ul.dropdown-menu li {
+            display: block;
+            width: 220px;
+            float: none; }
+            .footer #block-pdempowers-footer ul.menu > li ul.dropdown-menu li a {
+              white-space: normal; }
+  .footer #block-bottom {
+    display: block;
+    float: none;
+    clear: both; }
 
 /*# sourceMappingURL=ie9.css.map */
