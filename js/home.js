@@ -35,12 +35,13 @@ jQuery.noConflict();
 	}
 
 	$('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
+		
 		if($(e.target).attr("href") == "#keep-in-mind"){
 			$('.considerations').slick("refresh");
 		}
 		if($(e.target).attr("href") == "#cost"){
 			$('.sm-equal').each(function(index,ele){
-				$(ele).children.css('height', 'auto');
+				$(ele).children().css('height', 'auto');
 			});
 			equalize();
 		}
