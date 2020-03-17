@@ -7990,6 +7990,9 @@ a[title='Search'] {
       flex-direction: column;
       justify-content: center; } }
 
+#block-coronavirus {
+  padding: 0; }
+
 .considerations {
   margin: auto;
   max-width: 498px; }

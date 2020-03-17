@@ -289,6 +289,8 @@ jQuery.noConflict();
 			}
 		});	
 
+		
+
 	/**
 	 * filters in knowledge center
 	 */
@@ -368,12 +370,28 @@ jQuery.noConflict();
 	 	
 	 };
 
+
+
 	 if($('body').is('.node-id-31')){
 	 	kc();
 	 }
 
 
 
+	/* open coronavirus popup */
+	if ( $('#coronavirus').length ) {
+		if(typeof(Storage) !== "undefined") {
+			
+			if (!sessionStorage.coronavirusShown) {
+				$('#coronavirus').modal('show');
+				sessionStorage.coronavirusShown = 1;
+			}
+		}
+
+		else {
+			$('#coronavirus').modal('show');
+		}
+	} 
 
 
 
